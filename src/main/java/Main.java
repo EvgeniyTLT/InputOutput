@@ -5,5 +5,6 @@ public class Main {
         File file = new File("folder1/file1.txt");
         System.out.println(file.getName());
         System.out.println(file.exists());
+        System.out.println(file.isDirectory());
     }
 }
