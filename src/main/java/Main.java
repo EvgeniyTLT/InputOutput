@@ -6,5 +6,6 @@ public class Main {
         System.out.println(file.getName());
         System.out.println(file.exists());
         System.out.println(file.isDirectory());
+        System.out.println(file.isFile());
     }
 }
