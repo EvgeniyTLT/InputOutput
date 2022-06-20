@@ -13,10 +13,12 @@ public class Main1 {
         }
         try (InputStream inputStream = new FileInputStream(file)) {
             int a = inputStream.read();
+            String result = "";
             while (a != -1) {
-                System.out.print((char) a);
+                result+= (char) a;
                 a = inputStream.read();
             }
+            System.out.println(result);
 
         } catch (Exception e) {
             e.printStackTrace();
