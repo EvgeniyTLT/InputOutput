@@ -13,9 +13,9 @@ public class Main1 {
         }
         try (InputStream inputStream = new FileInputStream(file)) {
             int a = inputStream.read();
-            String result = "";
+            StringBuilder result = new StringBuilder();
             while (a != -1) {
-                result+= (char) a;
+                result.append((char) a);
                 a = inputStream.read();
             }
             System.out.println(result);
