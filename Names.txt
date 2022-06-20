@@ -1,1 +1,3 @@
-Bob, Rob, Lop
+Bob
+Rob
+Lop
