@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class Main1 {
     public static void main(String[] args) {
@@ -11,13 +8,13 @@ public class Main1 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try (InputStream inputStream = new FileInputStream(file)) {
-            byte[] array = new byte[8];
-            int count = inputStream.read(array);
+        try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
+
+            int a = reader.read();
             StringBuilder result = new StringBuilder();
-            while (count > 0) {
-                result.append(new String(array, 0, count));
-                count = inputStream.read(array);
+            while (a > 0) {
+                result.append((char) a);
+                a = reader.read();
             }
             System.out.println(result.toString());
         } catch (Exception e) {
