@@ -9,7 +9,6 @@ public class Main1 {
             e.printStackTrace();
         }
         try (Reader reader = new InputStreamReader(new FileInputStream(file))) {
-
             int a = reader.read();
             StringBuilder result = new StringBuilder();
             while (a > 0) {
