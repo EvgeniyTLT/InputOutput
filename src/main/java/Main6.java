@@ -8,8 +8,13 @@ public class Main6 {
         try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw")) {
             randomAccessFile.seek(10);
             randomAccessFile.writeBytes("*****************************************");
-            randomAccessFile.seek(1000);
-            randomAccessFile.writeBytes("*****************************************");
+            randomAccessFile.seek(5000);
+            byte[] array = new byte[1024];
+            randomAccessFile.read(array);
+            System.out.println(new String(array));
+            randomAccessFile.seek(5000);
+            randomAccessFile.read(array);
+            System.out.println(new String(array));
         } catch (Exception e) {
             e.printStackTrace();
         }
