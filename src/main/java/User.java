@@ -4,11 +4,22 @@ public class User implements Serializable {
     private String name;
     private String lastName;
     private int age;
+    private Address address;
 
-    public User(String name, String lastName, int age) {
+    public User(String name, String lastName, int age, Address address) {
+        System.out.println("Constructor");
         this.name = name;
         this.lastName = lastName;
         this.age = age;
+        this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getName() {
@@ -41,6 +52,7 @@ public class User implements Serializable {
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
+                ", address=" + address +
                 '}';
     }
 }
