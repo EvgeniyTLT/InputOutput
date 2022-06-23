@@ -1,7 +1,7 @@
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class Address implements Serializable {
+public class Address {
     private String street;
     private int numberOfHouse;
 
